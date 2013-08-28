@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+function submitForm(form,action,method){
+	form.action = action;
+	form.method = method;
+	form.submit();
+}
+
+</script>
+<body>
+<h1>Gerenciar Proprietario</h1>
+<form >
+  Codigo:  
+  <input name="uid"><br>
+  Nome:  
+  <input name="nome"><br>
+  
+  <input type="button" value="Salvar" onclick="javascript:submitForm(this.form, '/OficinaWS/proprietarios','post');"/> 
+  <input type="button" value="Delete" onclick="javascript:submitForm(this.form, '/OficinaWS/proprietarios','delete');"/> 
+</form>
+</body>
+</html>
